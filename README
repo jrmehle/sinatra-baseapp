@@ -1,0 +1,3 @@
+sinatra-baseapp
+
+A Sinatra base template from which other Sinatra apps can be created.
