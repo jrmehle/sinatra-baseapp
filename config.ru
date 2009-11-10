@@ -1,6 +1,6 @@
-require 'rubygems'
-require 'sinatra'
-require 'app'
+%w{ rubygems sinatra app }.each do |lib|
+  require lib
+end
 
 FileUtils.mkdir_p 'log' unless File.exists?('log')
 log = File.new("log/sinatra.log", "a+")

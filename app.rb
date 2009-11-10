@@ -1,6 +1,6 @@
-require 'rubygems'
-require 'sinatra'
-require 'helpers'
+%w{ rubygems sinatra helpers }.each do |lib|
+  require lib
+end
 
 helpers do
   include Helpers
