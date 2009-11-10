@@ -1,0 +1,65 @@
+body {
+  background: #222 none;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  line-height: 1em;
+}
+
+h1 { font-size: 160%; }
+h2 { font-size: 150%; }
+h3 { font-size: 140%; }
+h4 { font-size: 130%; }
+h5 { font-size: 120%; }
+h6 { font-size: 110%; }
+
+h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
+
+
+/*  PositionisEverything Clearfix
+    http://www.positioniseverything.net/easyclearing.html
+*/
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+#header,
+#content,
+#footer { 
+  margin: 0 auto;
+  width: 960px; 
+}
+
+
+#header .container,
+#content .container,
+#footer .container {
+  padding: 0.75em 1em;
+}
+
+#header {
+  height: 180px;
+  background: #DDD none;
+}
+#header .container { position: relative; }
+
+#content {
+  background: #F3F3F3 none;
+}
+
+#footer {
+  clear: both;
+  height: 180px;
+  background: #333 none;
+  color: #FFF;
+}

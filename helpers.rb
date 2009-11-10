@@ -47,12 +47,17 @@ module Helpers
     "<a href=\"#{string}\" class=\"email #{options[:class] if options.include?(:class)}\">#{text || email_address_encoded}</a>"
   end
 
-  # uncomment and add the routes and stylesheets needed
-  # def stylesheet_for_current_page
-  #   if ['/', '/services', '/projects', '/process', '/contact'].include? request.path_info
-  #     stylesheet = request.path_info.gsub('/', '')
-  #     stylesheet = 'index' if request.path_info == '/'
-  #     return "<link rel=\"stylesheet\" href=\"/stylesheets/#{stylesheet}.css\" type=\"text/css\" media=\"screen\" charset=\"utf-8\">"
-  #   end
-  # end
+  def stylesheet_for_current_page
+    stylesheet = request.path_info.gsub('/', '')
+    stylesheet = 'index' if request.path_info == '/'
+    return "<link rel=\"stylesheet\" href=\"/stylesheets/#{stylesheet}.css\" type=\"text/css\" media=\"screen\" charset=\"utf-8\">"
+  end
+  
+  def stylesheet_for_current_page_if(condition)
+    stylesheet_for_current_page if condition
+  end
+  
+  def use_page_stylesheet?
+    %w{ }.include? request.path_info
+  end
 end
