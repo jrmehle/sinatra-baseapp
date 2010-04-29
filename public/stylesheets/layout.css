@@ -1,17 +1,29 @@
+html {
+  background: #222 none;
+}
 body {
   background: #222 none;
   font-family: Arial, "MS Trebuchet", sans-serif;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 
+em { font-style: italic; }
+blockquote {
+  background: #CCC none;
+  margin: 1em 0;
+  padding: 0.5em;
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+}
 h1 { font-size: 160%; }
 h2 { font-size: 150%; }
 h3 { font-size: 140%; }
 h4 { font-size: 130%; }
 h5 { font-size: 120%; }
 h6 { font-size: 110%; }
-
-h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
 
 
 /*  PositionisEverything Clearfix
@@ -35,6 +47,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
 
 #header,
 #content,
+#nav, 
 #footer { 
   margin: 0 auto;
   width: 960px; 
@@ -53,13 +66,36 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
 }
 #header .container { position: relative; }
 
+#nav li {
+  padding: 0.5em;
+  float: left;
+}
+#nav li a {
+  display: block;
+  color: #F3F3F3;
+  text-decoration: none;
+  padding: 0.4em;
+}
+#nav li a:hover {
+  text-decoration: none;
+  background-color: #F3F3F3;
+  color: #222;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 #content {
   background: #F3F3F3 none;
+  -moz-box-shadow: 1px 1px 4px #000;    /* FF3.5+ */
+  -webkit-box-shadow: 1px 1px 4px #000; /* Saf3.0+, Chrome */
+  box-shadow: 1px 1px 4px #000;         /* Opera 10.5, IE 9.0 */
 }
 
 #footer {
   clear: both;
-  height: 180px;
+  height: 130px;
+  margin-bottom: 1.25em;
   background: #333 none;
   color: #FFF;
 }
