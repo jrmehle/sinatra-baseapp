@@ -12,20 +12,23 @@
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="header">
-      <div class="container">
-        Header
-      </div>
-    </div>
-    <div id="nav">
-      <ul class="clearfix">
-        <li><a href="/">Home</a></li>
-      </ul>
-    </div>
-    <div id="content" class="clearfix">
-      <div class="container">
-        <%= yield %>
+  <div id='site_wrapper'> 
+    <div id='page_wrapper'> 
+      <div id='content_wrapper'> 
+        <div id='header'> 
+          <div class='container'>
+            <h1>Header</h1>
+          </div>
+        </div>
+        <div id="nav">
+          <ul class="clearfix">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#other">Other Page</a></li>
+          </ul>
+        </div>
+        <div id="content" class="clearfix">
+          <%= yield %>
+        </div>
       </div>
     </div>
     <div id="footer">
@@ -34,5 +37,7 @@
       </div>
     </div>
   </div>
+  
+  <!-- JS goes here -->
 </body>
 </html>
